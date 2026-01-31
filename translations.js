@@ -45,7 +45,7 @@ const translations = {
         interestsItems: ["Автоматизация процессов", "Решение алгоритмических задач", "Самообучение (2-3 ч/день)", "Английский B1/B2"],
 
         aboutTitle: "Немного обо мне.",
-        aboutText1: "Студент с сильной практической ориентацией: для меня важно не только учиться, но и создавать работающие решения. Меня зажигают задачи, где нужно думать о логике, данных и эффективности.",
+        aboutText1: "Начинающий специалист с фокусом на практическую разработку. Верю в обучение через действие и стремлюсь к работе, где смогу немедленно применять навыки, решая реальные бизнес-задачи под руководством опытной команды.",
         aboutText2: 'Мой подход: <strong>"Сначала понять суть проблемы, затем автоматизировать решение"</strong>. Не боюсь лезть в документацию и искать ответы в сообществе.',
         aboutText3: "<strong>Цель на ближайший год:</strong> устроиться Junior Python Backend Developer в компанию с сильной командой и менторской поддержкой, чтобы расти как специалист.",
         
@@ -109,7 +109,7 @@ const translations = {
         interestsItems: ["Process automation", "Solving algorithmic problems", "Self-learning (2-3 hrs/day)", "English B1/B2"],
         
         aboutTitle: "A bit about me.",
-        aboutText1: "Student with strong practical orientation: for me, it's important not just to learn, but to create working solutions. I'm energized by tasks that require thinking about logic, data, and efficiency.",
+        aboutText1: "Junior specialist focused on practical development. I believe in learning by doing and aspire to work where I can immediately apply my skills by solving real business problems under the guidance of an experienced team.",
         aboutText2: 'My approach: <strong>"First understand the essence of the problem, then automate the solution"</strong>. I\'m not afraid to dive into documentation and seek answers in the community.',
         aboutText3: "<strong>Goal for the next year:</strong> get a Junior Python Backend Developer position in a company with a strong team and mentor support to grow as a specialist.",
         
