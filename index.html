@@ -12,18 +12,29 @@
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 </head>
 <body>
-    <!-- Навигация -->
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <a href="#hero" class="logo">GitHub Resume</a>
-                <ul class="nav-list">
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#skills">Навыки</a></li>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                    <li><a href="https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub" target="_blank" class="btn-resume">Резюме <i class="fas fa-external-link-alt"></i></a></li>
-                </ul>
+            <ul class="nav-list">
+                <li><a href="#projects" data-translate="navProjects">Проекты</a></li>
+                <li><a href="#skills" data-translate="navSkills">Навыки</a></li>
+                <li><a href="#about" data-translate="navAbout">Обо мне</a></li>
+                <li><a href="#contact" data-translate="navContact">Контакты</a></li>
+                <li>
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub" 
+                    target="_blank" 
+                    class="btn-resume" 
+                    data-translate="navResume">
+                    Резюме <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <span class="lang-separator">/</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </li>
+            </ul>
                 <button class="menu-toggle" aria-label="Открыть меню">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -32,7 +43,6 @@
     </header>
 
     <main>
-        <!-- Герой -->
         <section id="hero" class="hero">
             <div class="container hero-container">
                 <div class="hero-text">
@@ -55,13 +65,11 @@
             </div>
         </section>
 
-        <!-- Проекты -->
         <section id="projects" class="section projects">
             <div class="container">
                 <h2 class="section-title">Мои проекты<span class="highlight">.</span></h2>
                 <div class="projects-grid">
 
-                    <!-- Проект 1 -->
                     <article class="project-card">
                         <div class="project-header">
                             <h3 class="project-title">Автоплощадка с Telegram-ботом</h3>
@@ -82,7 +90,6 @@
                         </div>
                     </article>
 
-                    <!-- Проект 2 -->
                     <article class="project-card">
                         <div class="project-header">
                             <h3 class="project-title">Скрипт для автоматизации сортировки файлов</h3>
@@ -102,7 +109,6 @@
                         </div>
                     </article>
 
-                    <!-- Проект 3 -->
                     <article class="project-card">
                         <div class="project-header">
                             <h3 class="project-title">Консольный планировщик задач (C++)</h3>
@@ -126,7 +132,6 @@
             </div>
         </section>
 
-        <!-- Навыки -->
         <section id="skills" class="section skills">
             <div class="container">
                 <h2 class="section-title">Технологии и навыки<span class="highlight">.</span></h2>
@@ -168,7 +173,6 @@
             </div>
         </section>
 
-        <!-- Обо мне -->
         <section id="about" class="section about">
             <div class="container">
                 <h2 class="section-title">Немного обо мне<span class="highlight">.</span></h2>
@@ -194,7 +198,6 @@
             </div>
         </section>
 
-        <!-- Контакты -->
         <section id="contact" class="section contact">
             <div class="container">
                 <h2 class="section-title">Связаться со мной<span class="highlight">.</span></h2>
@@ -215,7 +218,6 @@
         </section>
     </main>
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <p>© <span id="currentYear">2024</span> Павел. Сделано с <i class="fas fa-heart"></i> и кодом.</p>
@@ -223,7 +225,6 @@
         </div>
     </footer>
 
-    <!-- Скрипт -->
     <script src="script.js"></script>
 </body>
 </html>
