@@ -70,6 +70,7 @@ const translations = {
         navAbout: "About me",
         navContact: "Contact",
         navResume: "Resume",
+        logoText: "GitHub Resume",
         pageTitle: "Pavel | Python Backend Developer",
 
         heroTitle: "Hi, I'm Pavel.",
