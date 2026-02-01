@@ -46,7 +46,7 @@ const translations = {
 
         aboutTitle: "Немного обо мне.",
         aboutText1: "Начинающий специалист с фокусом на практическую разработку. Верю в обучение через действие и стремлюсь к работе, где смогу немедленно применять навыки, решая реальные бизнес-задачи под руководством опытной команды.",
-        aboutText2: 'Мой подход: <strong>"Сначала понять суть проблемы, затем автоматизировать решение"</strong>. Не боюсь лезть в документацию и искать ответы в сообществе.',
+        aboutText2: 'Мой подход: <strong>"Сначала понять суть проблемы, затем автоматизировать решение"</strong>. Не боюсь работать с большими объёмами документации.',
         aboutText3: "<strong>Цель на ближайший год:</strong> устроиться Junior Python Backend Developer в компанию с сильной командой и менторской поддержкой, чтобы расти как специалист.",
         
         factTitle: "Быстрый факт",
@@ -75,7 +75,7 @@ const translations = {
 
         heroTitle: "Hi, I'm Pavel.",
         heroSubtitle: "Junior <span class='highlight'>Python Backend Developer</span>",
-        heroDesc: "3rd year student at SPbGUPTD. Passionate about process automation, logic design, and data work. Looking for an opportunity to start a career in a strong IT company to grow from basics to complex tasks.",
+        heroDesc: "I'm a third-year student at SPbGUPTD.I'm interested in process automation, design logic, and work with data. I'm looking for an opportunity to start my career in a strong IT company and grow as professional.",
         heroButtonProjects: "View Projects",
         heroButtonGitHub: "GitHub",
 
@@ -109,15 +109,15 @@ const translations = {
         interestsItems: ["Process automation", "Solving algorithmic problems", "Self-learning (2-3 hrs/day)", "English B1/B2"],
         
         aboutTitle: "A bit about me.",
-        aboutText1: "Junior specialist focused on practical development. I believe in learning by doing and aspire to work where I can immediately apply my skills by solving real business problems under the guidance of an experienced team.",
-        aboutText2: 'My approach: <strong>"First understand the essence of the problem, then automate the solution"</strong>. I\'m not afraid to dive into documentation and seek answers in the community.',
-        aboutText3: "<strong>Goal for the next year:</strong> get a Junior Python Backend Developer position in a company with a strong team and mentor support to grow as a specialist.",
+        aboutText1: "I'm young specialist focused on practical development. I believe in learning by doing and am looking for a job where I can immediately apply my skills by solving real-world business problems under the guidance of an experienced team.",
+        aboutText2: 'My approach is <strong>"First understand the problem, then automate the solution"</strong>. I\'m not afraid with documentation and search for answers in the community.',
+        aboutText3: "<strong>My goal for the next year:</strong> to find a Junior Python Backend Developer position in a company with a strong team and mentoring support, so I can grow as a professional and as person.",
         
         factTitle: "Quick Fact",
-        factText: "If a task repeats three times, it's time to write a script. I automated the sorting of study materials this way, saving myself dozens of hours per semester.",
+        factText: "If a task repeats three times, it's time to write a script. I automated the sorting of study materials this way, saving myself a lot of time.",
         
         contactTitle: "Get in touch.",
-        contactSubtitle: "Open to internship offers, Junior positions, or just interesting conversations about technology.",
+        contactSubtitle: "I'm open to offers internship, junior positions, or just interesting conversations about technology.",
         contactNote: "📄 Full resume with project details is available via the link in the header or ",
         
         footerText: "Saint Petersburg | SPbGUPTD Student | pavel.r.contact@mail.ru",
