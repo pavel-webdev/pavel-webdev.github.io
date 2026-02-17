@@ -61,7 +61,7 @@ const translations = {
         footerText: "Санкт-Петербург | Студент СПГУПТиД | pavel.r.contact@mail.ru",
         
 
-        resumeLink: "https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub"
+        resumeLink: "https://docs.google.com/document/d/1Cnvjds8a7rppthX52WPzPWspVeZD3RGS8ZNcj68J-gg/edit?usp=sharing"
     },
     
     en: {
@@ -122,6 +122,6 @@ const translations = {
         
         footerText: "Saint Petersburg | SPbGUPTD Student | pavel.r.contact@mail.ru",
         
-        resumeLink: "https://docs.google.com/document/d/e/2PACX-1vTtBO3nxDprJ150yoxrqTz4zsTZ6cNZzfaW-d2P72p5TlhHVT1tBqg8NWP3q_jt03yI6DUMMbEO-ymw/pub" 
+        resumeLink: "https://docs.google.com/document/d/1Z8Pk0LmCg3nFyeNBTtlcFePPJoRWTJeJZLzjkvquYlI/edit?usp=sharing" 
     }
 };
