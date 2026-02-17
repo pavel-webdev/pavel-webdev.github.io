@@ -122,6 +122,6 @@ const translations = {
         
         footerText: "Saint Petersburg | SPbGUPTD Student | pavel.r.contact@mail.ru",
         
-        resumeLink: "https://docs.google.com/document/d/e/2PACX-1vRPDAIOM0rISg_oP9FgiyJoYRrCPBu_P_IE_Hkh0sB9avkxzraMonykZ0Snix63Q1jra9FWcHV_wIw7/pub" 
+        resumeLink: "https://docs.google.com/document/d/e/2PACX-1vTtBO3nxDprJ150yoxrqTz4zsTZ6cNZzfaW-d2P72p5TlhHVT1tBqg8NWP3q_jt03yI6DUMMbEO-ymw/pub" 
     }
 };
