@@ -91,7 +91,7 @@ const translations = {
     footerAndCode: "и кодом",
     footerLocation: "Санкт-Петербург, Россия",
 
-    resumeLink: "https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub"
+    resumeLink: "https://docs.google.com/document/d/1Cnvjds8a7rppthX52WPzPWspVeZD3RGS8ZNcj68J-gg/edit?usp=sharing"
   },
 
   en: {
@@ -186,6 +186,6 @@ const translations = {
     footerAndCode: "and code",
     footerLocation: "Saint Petersburg, Russia",
 
-    resumeLink: "https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub"
+    resumeLink: "https://docs.google.com/document/d/1Z8Pk0LmCg3nFyeNBTtlcFePPJoRWTJeJZLzjkvquYlI/edit?usp=sharing"
   }
 };
