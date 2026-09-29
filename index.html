@@ -30,8 +30,8 @@
 <!-- Header -->
 <header class="header" id="header">
   <div class="container nav">
-    <a href="#hero" class="logo">
-    <span class="logo-mark">&lt;/&gt;</span>
+    <a href="#hero" class="logo" aria-label="На главную">
+      <span class="logo-mark">&lt;/&gt;</span>
     </a>
 
     <ul class="nav-list" id="navList">
@@ -39,6 +39,20 @@
       <li><a href="#skills" data-i18n="navSkills">Навыки</a></li>
       <li><a href="#about" data-i18n="navAbout">Обо мне</a></li>
       <li><a href="#contact" data-i18n="navContact">Контакты</a></li>
+
+
+      <li class="nav-mobile-extra">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub"
+           target="_blank" rel="noopener" class="btn-resume-mobile" id="resumeBtnMobile">
+          <i class="fas fa-file-lines"></i>
+          <span data-i18n="navResume">Резюме</span>
+        </a>
+      </li>
+
+      <li class="nav-lang">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </li>
     </ul>
 
     <div class="nav-actions">
@@ -48,16 +62,19 @@
         <span data-i18n="navResume">Резюме</span>
       </a>
 
-      <div class="lang-switcher">
+      <div class="lang-switcher lang-switcher-desktop">
         <button class="lang-btn active" data-lang="ru">RU</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </div>
+
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
 </header>
 
 <main>
