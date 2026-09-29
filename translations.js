@@ -1,127 +1,191 @@
 const translations = {
-    ru: {
-        navProjects: "Проекты",
-        navSkills: "Навыки",
-        navAbout: "Обо мне",
-        navContact: "Контакты",
-        navResume: "Резюме",
-        logoText: "GitHub Resume",
-        pageTitle: "Павел | Python Backend Developer",
+  ru: {
+    pageTitle: "Павел | Python Backend Developer",
 
+    navProjects: "Проекты",
+    navSkills: "Навыки",
+    navAbout: "Обо мне",
+    navContact: "Контакты",
+    navResume: "Резюме",
 
-        heroTitle: "Привет, я Павел.",
-        heroSubtitle: "Начинающий <span class='highlight'>Backend-разработчик</span> на Python",
-        heroDesc: "Студент 3-го курса СПГУПТиД. Увлекаюсь автоматизацией процессов, проектированием логики и работой с данными. Ищу возможность начать карьеру в сильной IT-компании, чтобы расти от основ к сложным задачам.",
-        heroButtonProjects: "Смотреть проекты",
-        heroButtonGitHub: "GitHub",
+    statusOpen: "Открыт к предложениям",
+    heroHello: "Привет, я",
+    heroSubtitle: 'Разработчик <span class="grad-text">Python Backend</span>',
+    heroDesc: "Студент 4-го курса СПбГУПТД. Проектирую REST API, работаю с PostgreSQL и автоматизирую рутину. Ищу команду, где смогу расти от простых задач к архитектуре.",
+    ctaProjects: "Смотреть проекты",
 
-        projectsTitle: "Мои проекты.",
-        project1Title: "Автоплощадка с Telegram-ботом",
-        project1Goal: "<strong>Цель:</strong> Создать систему для автоматической публикации объявлений из Telegram-канала на веб-сайт.",
-        project1What: "<strong>Что сделал:</strong> Написал PHP-скрипт для приёма данных от Telegram Bot API, спроектировал и реализовал базу данных PostgreSQL для хранения автомобилей и изображений, создал веб-интерфейс для отображения каталога.",
-        project1Stack: "<strong>Стек:</strong> PHP, PostgreSQL, SQL (сложные запросы, VIEW), Telegram Bot API, HTML/CSS/JS.",
-        
-        project2Title: "Скрипт для автоматизации сортировки файлов",
-        project2Goal: "<strong>Цель:</strong> Избавить себя от ручного упорядочивания учебных материалов.",
-        project2What: "<strong>Что сделал:</strong> Написал Python-скрипт, который анализирует имена и метаданные файлов, сортирует их по папкам (по дате, теме, типу), переименовывает по единому шаблону. Скрипт экономит 1-2 часа в неделю.",
-        project2Stack: "<strong>Стек:</strong> Python (os, shutil, pathlib), регулярные выражения.",
-        
-        project3Title: "Консольный планировщик задач (C++)",
-        project3Goal: "<strong>Цель:</strong> Изучить работу с файлами, структурами данных и алгоритмами сортировки.",
-        project3What: "<strong>Что сделал:</strong> Реализовал консольное приложение для учёта задач с приоритетами и сроками. Задачи сохраняются в файл, есть функции добавления, удаления, редактирования и сортировки по разным критериям.",
-        project3Stack: "<strong>Стек:</strong> C++, файловый ввод/вывод, структуры данных.",
+    statProjects: "проектов",
+    statPapers: "статей РИНЦ",
+    statGpa: "средний балл",
 
-        skillsTitle: "Технологии и навыки.",
-        backendTitle: "Backend",
-        backendItems: ["Python (основной язык)", "PHP (опыт интеграции)", "REST API концепции"],
-        
-        dbTitle: "Базы данных",
-        dbItems: ["PostgreSQL (сложные запросы, JOIN, VIEW)", "SQL", "Проектирование схем"],
-        
-        frontendTitle: "Frontend & Другое",
-        frontendItems: ["HTML / CSS / JavaScript", "Git & GitHub", "C++ (базовый уровень)"],
-        
-        interestsTitle: "Интересы и качества",
-        interestsItems: ["Автоматизация процессов", "Решение алгоритмических задач", "Самообучение (2-3 ч/день)", "Английский B1/B2"],
+    tagWork: "Избранное",
+    projectsTitle: 'Проекты<span class="accent">.</span>',
+    projectsSub: "Проекты, где я проектировал архитектуру, писал backend и решал задачи от начала до конца.",
+    seeAllProjects: "Все проекты на GitHub",
 
-        aboutTitle: "Немного обо мне.",
-        aboutText1: "Начинающий специалист с фокусом на практическую разработку. Верю в обучение через действие и стремлюсь к работе, где смогу немедленно применять навыки, решая реальные бизнес-задачи под руководством опытной команды.",
-        aboutText2: 'Мой подход: <strong>"Сначала понять суть проблемы, затем автоматизировать решение"</strong>. Не боюсь работать с большими объёмами документации.',
-        aboutText3: "<strong>Цель на ближайший год:</strong> устроиться Junior Python Backend Developer в компанию с сильной командой и менторской поддержкой, чтобы расти как специалист.",
-        
-        factTitle: "Быстрый факт",
-        factText: "Если задача повторяется трижды, пора писать скрипт. Так автоматизировал сортировку учебных материалов, что сэкономил себе десятки часов за семестр.",
-        
+    p1Title: "Автоплощадка с Telegram-ботом",
+    p1Desc: "Автоматизировал перенос объявлений из Telegram-канала на сайт.",
+    p1Points: [
+      "Архитектура: Telegram API → PHP → PostgreSQL → web",
+      "Сложные SQL (JOIN, VIEW до 100+ строк)",
+      "Готовый MVP, заменивший ручную публикацию"
+    ],
 
-        contactTitle: "Связаться со мной.",
-        contactSubtitle: "Открыт к предложениям о стажировке, Junior-позиции или просто к интересному общению о технологиях.",
-        contactNote: "📄 Полное резюме с деталями проектов доступно по ссылке в шапке сайта или ",
-        
+    p2Title: "FinTrack Pro — учёт финансов",
+    p2Desc: "Веб-приложение с REST API, аналитикой и авто-категоризацией расходов.",
+    p2Points: [
+      "Backend на Flask: CRUD-операции с транзакциями",
+      "Автоматическая категоризация по ключевым словам",
+      "Оптимизировал SQL — выборка ускорилась на 40%"
+    ],
 
-        footerText: "Санкт-Петербург | Студент СПГУПТиД | pavel.r.contact@mail.ru",
-        
+    p3Title: "Code Review Assistant",
+    p3Desc: "Статический анализатор Python-кода на базе AST.",
+    p3Points: [
+      "Обход AST: PEP 8, магические числа, except-блоки",
+      "Оценка сложности и расширяемая система проверок",
+      "Веб-интерфейс на Flask"
+    ],
 
-        resumeLink: "https://docs.google.com/document/d/1Cnvjds8a7rppthX52WPzPWspVeZD3RGS8ZNcj68J-gg/edit?usp=sharing"
-    },
-    
-    en: {
-        navProjects: "Projects",
-        navSkills: "Skills",
-        navAbout: "About me",
-        navContact: "Contact",
-        navResume: "Resume",
-        logoText: "GitHub Resume",
-        pageTitle: "Pavel | Python Backend Developer",
+    p4Title: "CustomAuth — RBAC + JWT",
+    p4Desc: "Гибкая система аутентификации и авторизации с RBAC-моделью.",
+    p4Points: [
+      "JWT-аутентификация + middleware валидации токенов",
+      "Проверка прав по действиям: view, create, edit, delete",
+      "Обработка 401/403, модульная архитектура"
+    ],
 
-        heroTitle: "Hi, I'm Pavel.",
-        heroSubtitle: "Junior <span class='highlight'>Python Backend Developer</span>",
-        heroDesc: "I'm a third-year student at SPbGUPTD.I'm interested in process automation, design logic, and work with data. I'm looking for an opportunity to start my career in a strong IT company and grow as professional.",
-        heroButtonProjects: "View Projects",
-        heroButtonGitHub: "GitHub",
+    tagStack: "Стек",
+    skillsTitle: 'Технологии<span class="accent">.</span>',
+    skillsSub: "Инструменты, с которыми я работаю ежедневно.",
 
-        projectsTitle: "My Projects.",
-        project1Title: "Car marketplace with Telegram bot",
-        project1Goal: "<strong>Goal:</strong> Create a system for automatic publication of ads from a Telegram channel to a website.",
-        project1What: "<strong>What I did:</strong> Wrote a PHP script to receive data from Telegram Bot API, designed and implemented a PostgreSQL database to store cars and images, created a web interface to display the catalog.",
-        project1Stack: "<strong>Stack:</strong> PHP, PostgreSQL, SQL (complex queries, VIEW), Telegram Bot API, HTML/CSS/JS.",
-        
-        project2Title: "File sorting automation script",
-        project2Goal: "<strong>Goal:</strong> Free myself from manual organization of study materials.",
-        project2What: "<strong>What I did:</strong> Wrote a Python script that analyzes file names and metadata, sorts them into folders (by date, topic, type), renames them according to a single template. The script saves 1-2 hours per week.",
-        project2Stack: "<strong>Stack:</strong> Python (os, shutil, pathlib), regular expressions.",
-        
-        project3Title: "Console task scheduler (C++)",
-        project3Goal: "<strong>Goal:</strong> Learn file operations, data structures, and sorting algorithms.",
-        project3What: "<strong>What I did:</strong> Implemented a console application for task management with priorities and deadlines. Tasks are saved to a file, with functions for adding, deleting, editing and sorting by various criteria.",
-        project3Stack: "<strong>Stack:</strong> C++, file I/O, data structures.",
+    skillBackend: "Backend",
+    skillBackendItems: ["Python", "Django REST Framework", "Flask", "REST API · JWT"],
 
-        skillsTitle: "Technologies & Skills.",
-        backendTitle: "Backend",
-        backendItems: ["Python (main language)", "PHP (integration experience)", "REST API concepts"],
-        
-        dbTitle: "Databases",
-        dbItems: ["PostgreSQL (complex queries, JOIN, VIEW)", "SQL", "Schema design"],
-        
-        frontendTitle: "Frontend & Other",
-        frontendItems: ["HTML / CSS / JavaScript", "Git & GitHub", "C++ (basic level)"],
-        
-        interestsTitle: "Interests & Qualities",
-        interestsItems: ["Process automation", "Solving algorithmic problems", "Self-learning (2-3 hrs/day)", "English B1/B2"],
-        
-        aboutTitle: "A bit about me.",
-        aboutText1: "I'm young specialist focused on practical development. I believe in learning by doing and am looking for a job where I can immediately apply my skills by solving real-world business problems under the guidance of an experienced team.",
-        aboutText2: 'My approach is <strong>"First understand the problem, then automate the solution"</strong>. I\'m not afraid with documentation and search for answers in the community.',
-        aboutText3: "<strong>My goal for the next year:</strong> to find a Junior Python Backend Developer position in a company with a strong team and mentoring support, so I can grow as a professional and as person.",
-        
-        factTitle: "Quick Fact",
-        factText: "If a task repeats three times, it's time to write a script. I automated the sorting of study materials this way, saving myself a lot of time.",
-        
-        contactTitle: "Get in touch.",
-        contactSubtitle: "I'm open to offers internship, junior positions, or just interesting conversations about technology.",
-        contactNote: "📄 Full resume with project details is available via the link in the header or ",
-        
-        footerText: "Saint Petersburg | SPbGUPTD Student | pavel.r.contact@mail.ru",
-        
-        resumeLink: "https://docs.google.com/document/d/1Z8Pk0LmCg3nFyeNBTtlcFePPJoRWTJeJZLzjkvquYlI/edit?usp=sharing" 
-    }
+    skillDb: "Базы данных",
+    skillDbItems: ["PostgreSQL", "SQL (JOIN, VIEW)", "Проектирование схем", "Оптимизация запросов"],
+
+    skillInfra: "Инфраструктура",
+    skillInfraItems: ["Linux · Bash", "Docker", "Nginx · Gunicorn", "Git · GitHub"],
+
+    skillExtra: "Дополнительно",
+    skillExtraItems: ["PHP (интеграция)", "HTML · CSS · JS", "Postman · DBeaver", "English B1/B2"],
+
+    tagAbout: "Обо мне",
+    aboutTitle: 'Подход<span class="accent">.</span>',
+    aboutP1: "Начинающий backend-разработчик с фокусом на практику. Учусь через реальные задачи: пишу код, ломаю, рефакторю и снова пишу.",
+    aboutP2: 'Мой принцип: <strong>сначала понять суть, потом автоматизировать</strong>. Не боюсь документации и открытого кода.',
+    aboutP3: '<strong>Цель:</strong> Junior Python Backend Developer в команде с сильным менторством.',
+    factTitle: "Быстрый факт",
+    factText: "Если задача повторяется трижды — пора писать скрипт. Так я автоматизировал сортировку учебных материалов и сэкономил десятки часов.",
+    eduTitle: "Образование",
+    eduText: "СПбГУПТД · Разработка IT-систем · 2023–2027 · Средний балл 4.9/5.0",
+
+    tagContact: "Контакты",
+    contactTitle: 'Давайте работать вместе<span class="accent">.</span>',
+    contactSub: "Открыт к стажировке, Junior-позиции и интересным проектам.",
+    copyEmail: "Копировать",
+    copied: "Скопировано!",
+
+    footerMade: "сделано с",
+    footerAndCode: "и кодом",
+    footerLocation: "Санкт-Петербург, Россия",
+
+    resumeLink: "https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub"
+  },
+
+  en: {
+    pageTitle: "Pavel | Python Backend Developer",
+
+    navProjects: "Projects",
+    navSkills: "Skills",
+    navAbout: "About",
+    navContact: "Contact",
+    navResume: "Resume",
+
+    statusOpen: "Open to opportunities",
+    heroHello: "Hi, I'm",
+    heroSubtitle: '<span class="grad-text">Python Backend</span> Developer',
+    heroDesc: "4th-year student at SPbGUPTD. I build REST APIs with Python, work with PostgreSQL and automate routine tasks. Looking for a team to grow from feature work to architecture.",
+    ctaProjects: "View projects",
+
+    statProjects: "projects",
+    statPapers: "RSCI papers",
+    statGpa: "GPA",
+
+    tagWork: "Featured",
+    projectsTitle: 'Projects<span class="accent">.</span>',
+    projectsSub: "Projects where I designed architecture, wrote backend and shipped end-to-end.",
+    seeAllProjects: "All projects on GitHub",
+
+    p1Title: "Car marketplace with Telegram bot",
+    p1Desc: "Automated the transfer of listings from a Telegram channel to a website.",
+    p1Points: [
+      "Architecture: Telegram API → PHP → PostgreSQL → web",
+      "Complex SQL (JOIN, VIEW up to 100+ lines)",
+      "Shipped MVP replacing manual publishing"
+    ],
+
+    p2Title: "FinTrack Pro — personal finance",
+    p2Desc: "Web app with REST API, analytics and auto-categorization of expenses.",
+    p2Points: [
+      "Flask backend: CRUD operations on transactions",
+      "Automatic keyword-based categorization",
+      "Optimized SQL — query time reduced by 40%"
+    ],
+
+    p3Title: "Code Review Assistant",
+    p3Desc: "Static Python code analyzer built on AST.",
+    p3Points: [
+      "AST traversal: PEP 8, magic numbers, except blocks",
+      "Complexity scoring and extensible check system",
+      "Flask web interface"
+    ],
+
+    p4Title: "CustomAuth — RBAC + JWT",
+    p4Desc: "Flexible authentication and authorization system with RBAC model.",
+    p4Points: [
+      "JWT auth + token validation middleware",
+      "Action-level permission checks: view, create, edit, delete",
+      "401/403 handling, modular architecture"
+    ],
+
+    tagStack: "Stack",
+    skillsTitle: 'Technologies<span class="accent">.</span>',
+    skillsSub: "Tools I work with every day.",
+
+    skillBackend: "Backend",
+    skillBackendItems: ["Python", "Django REST Framework", "Flask", "REST API · JWT"],
+
+    skillDb: "Databases",
+    skillDbItems: ["PostgreSQL", "SQL (JOIN, VIEW)", "Schema design", "Query optimization"],
+
+    skillInfra: "Infrastructure",
+    skillInfraItems: ["Linux · Bash", "Docker", "Nginx · Gunicorn", "Git · GitHub"],
+
+    skillExtra: "Also",
+    skillExtraItems: ["PHP (integration)", "HTML · CSS · JS", "Postman · DBeaver", "English B1/B2"],
+
+    tagAbout: "About",
+    aboutTitle: 'Approach<span class="accent">.</span>',
+    aboutP1: "Junior backend developer focused on practice. I learn through real tasks: write code, break it, refactor, repeat.",
+    aboutP2: 'My principle: <strong>understand the problem first, then automate</strong>. Not afraid of docs or open source.',
+    aboutP3: '<strong>Goal:</strong> Junior Python Backend Developer in a team with strong mentorship.',
+    factTitle: "Quick fact",
+    factText: "If a task repeats three times — time to script it. That's how I automated study-material sorting and saved dozens of hours.",
+    eduTitle: "Education",
+    eduText: "SPbGUPTD · IT & Multimedia Systems · 2023–2027 · GPA 4.9/5.0",
+
+    tagContact: "Contact",
+    contactTitle: "Let's work together<span class=\"accent\">.</span>",
+    contactSub: "Open to internships, junior roles and interesting projects.",
+    copyEmail: "Copy",
+    copied: "Copied!",
+
+    footerMade: "made with",
+    footerAndCode: "and code",
+    footerLocation: "Saint Petersburg, Russia",
+
+    resumeLink: "https://docs.google.com/document/d/e/2PACX-1vTScqJwPrau2BVBmpUDVT-v4FirnsTUkbsKZ6VT9vN__nnJl3axq882XuAf4lm05Dvh_5PpvXuZdbeq/pub"
+  }
 };

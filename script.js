@@ -1,205 +1,164 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('.nav-list');
+document.addEventListener('DOMContentLoaded', () => {
 
-if (menuToggle) {
+  /* ===== Year ===== */
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* ===== Mobile menu ===== */
+  const menuToggle = document.getElementById('menuToggle');
+  const navList = document.getElementById('navList');
+  if (menuToggle && navList) {
     menuToggle.addEventListener('click', () => {
-        navList.classList.toggle('active');
-        menuToggle.innerHTML = navList.classList.contains('active') 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
+      navList.classList.toggle('open');
+      const icon = menuToggle.querySelector('i');
+      icon.className = navList.classList.contains('open') ? 'fas fa-xmark' : 'fas fa-bars';
     });
+    navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navList.classList.remove('open');
+      menuToggle.querySelector('i').className = 'fas fa-bars';
+    }));
+  }
 
-    document.querySelectorAll('.nav-list a').forEach(link => {
-        link.addEventListener('click', () => {
-            navList.classList.remove('active');
-            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-        });
-    });
-}
-
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-const langButtons = document.querySelectorAll('.lang-btn');
-const currentLang = localStorage.getItem('language') || 'ru';
-
-let translations = {};
-
-fetch('translations.js')
-    .then(response => response.text())
-    .then(data => {
-        const match = data.match(/const translations = ({[\s\S]*?});/);
-        if (match) {
-            eval('translations = ' + match[1]);
-            initLanguage();
-        }
-    })
-    .catch(error => {
-        console.error('Error loading translations:', error);
-        translations = window.translations || {};
-        initLanguage();
-    });
-
-function initLanguage() {
-    setLanguage(currentLang);
-
-    langButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const lang = button.dataset.lang;
-            setLanguage(lang);
-            localStorage.setItem('language', lang);
-        });
-    });
-}
-
-function setLanguage(lang) {
-    if (!translations[lang]) return;
-
-    langButtons.forEach(btn => {
-        if (btn.dataset.lang === lang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-    
-    updateTexts(lang);
-
-    updateResumeLink(lang);
-}
-
-function updateTexts(lang) {
-    const t = translations[lang];
-
-    document.title = t.pageTitle;
-
-    updateText('.logo', t.logoText);
-
-    updateText('.nav-list a[href="#projects"]', t.navProjects);
-    updateText('.nav-list a[href="#skills"]', t.navSkills);
-    updateText('.nav-list a[href="#about"]', t.navAbout);
-    updateText('.nav-list a[href="#contact"]', t.navContact);
-    updateText('.btn-resume', t.navResume);
-    
-
-    updateText('.hero-title', t.heroTitle);
-    updateHTML('.hero-subtitle', t.heroSubtitle);
-    updateText('.hero-desc', t.heroDesc);
-    updateText('.hero-buttons .btn-primary', t.heroButtonProjects);
-    updateText('.hero-buttons .btn-ghost', t.heroButtonGitHub);
-    
-    // Проекты
-    updateText('.projects .section-title', t.projectsTitle);
-    updateText('.project-card:nth-child(1) .project-title', t.project1Title);
-    updateHTML('.project-card:nth-child(1) .project-desc', 
-        t.project1Goal + '<br>' + t.project1What + '<br>' + t.project1Stack);
-    
-    updateText('.project-card:nth-child(2) .project-title', t.project2Title);
-    updateHTML('.project-card:nth-child(2) .project-desc',
-        t.project2Goal + '<br>' + t.project2What + '<br>' + t.project2Stack);
-    
-    updateText('.project-card:nth-child(3) .project-title', t.project3Title);
-    updateHTML('.project-card:nth-child(3) .project-desc',
-        t.project3Goal + '<br>' + t.project3What + '<br>' + t.project3Stack);
-
-    updateText('.skills .section-title', t.skillsTitle);
-    updateText('.skill-category:nth-child(1) h3', t.backendTitle);
-    updateList('.skill-category:nth-child(1) li', t.backendItems);
-    
-    updateText('.skill-category:nth-child(2) h3', t.dbTitle);
-    updateList('.skill-category:nth-child(2) li', t.dbItems);
-    
-    updateText('.skill-category:nth-child(3) h3', t.frontendTitle);
-    updateList('.skill-category:nth-child(3) li', t.frontendItems);
-    
-    updateText('.skill-category:nth-child(4) h3', t.interestsTitle);
-    updateList('.skill-category:nth-child(4) li', t.interestsItems);
-
-    updateText('.about .section-title', t.aboutTitle);
-    updateHTML('.about-text p:nth-child(1)', t.aboutText1);
-    updateHTML('.about-text p:nth-child(2)', t.aboutText2);
-    updateHTML('.about-text p:nth-child(3)', t.aboutText3);
-    
-    updateText('.about-fact h3', t.factTitle);
-    updateText('.about-fact p', t.factText);
-
-    updateText('.contact .section-title', t.contactTitle);
-    updateText('.contact-subtitle', t.contactSubtitle);
-    updateHTML('.contact-note', t.contactNote + '<a href="' + t.resumeLink + '" target="_blank">here</a>.');
-
-    updateText('.footer p:nth-child(2)', t.footerText);
-}
-
-function updateText(selector, text) {
-    const element = document.querySelector(selector);
-    if (element) element.textContent = text;
-}
-
-function updateHTML(selector, html) {
-    const element = document.querySelector(selector);
-    if (element) element.innerHTML = html;
-}
-
-function updateList(selector, items) {
-    const elements = document.querySelectorAll(selector);
-    elements.forEach((el, index) => {
-        if (items[index]) {
-            el.textContent = items[index];
-        }
-    });
-}
-
-function updateResumeLink(lang) {
-    const resumeLink = document.querySelector('.btn-resume');
-    if (resumeLink && translations[lang]) {
-        resumeLink.href = translations[lang].resumeLink;
+  /* ===== Header scroll state ===== */
+  const header = document.getElementById('header');
+  const scrollBar = document.getElementById('scrollBar');
+  const onScroll = () => {
+    const sy = window.scrollY;
+    if (header) header.classList.toggle('scrolled', sy > 20);
+    if (scrollBar) {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      scrollBar.style.width = (h > 0 ? (sy / h) * 100 : 0) + '%';
     }
-}
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  /* ===== Active nav on scroll ===== */
+  const sections = ['projects', 'skills', 'about', 'contact'].map(id => document.getElementById(id));
+  const navLinks = document.querySelectorAll('.nav-list a');
+  const setActive = () => {
+    const pos = window.scrollY + 120;
+    let current = '';
+    sections.forEach(s => { if (s && s.offsetTop <= pos) current = s.id; });
+    navLinks.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  };
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+
+  /* ===== Smooth scroll ===== */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     });
-});
+  });
 
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-        }
+  /* ===== Reveal on scroll ===== */
+  const revealEls = document.querySelectorAll(
+    '.project-card, .skill-card, .fact-card, .about-text p, .contact-box, .hero-stats, .section-head'
+  );
+  revealEls.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
     });
-}, observerOptions);
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach((el, i) => {
+    el.style.transitionDelay = Math.min(i * 40, 240) + 'ms';
+    io.observe(el);
+  });
 
+  /* ===== Card mouse glow ===== */
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
 
-document.querySelectorAll('.project-card, .skill-category, .about-fact').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    
-    observer.observe(el);
+  /* ===== Copy email ===== */
+  const copyBtn = document.getElementById('copyEmail');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('pavel.r.contact@mail.ru');
+        const label = copyBtn.querySelector('span');
+        const old = label.textContent;
+        const done = (translations[currentLang]?.copied) || 'Скопировано';
+        label.textContent = done;
+        copyBtn.classList.add('copied');
+        setTimeout(() => { label.textContent = old; copyBtn.classList.remove('copied'); }, 1600);
+      } catch (e) {
+        console.warn('Copy failed', e);
+      }
+    });
+  }
+
+  /* ===== i18n ===== */
+  let currentLang = localStorage.getItem('lang') || 'ru';
+  if (!translations[currentLang]) currentLang = 'ru';
+
+  const langButtons = document.querySelectorAll('.lang-btn');
+
+  function applyTranslations(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    document.documentElement.lang = lang;
+
+    // plain text
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (t[key] != null) el.textContent = t[key];
+    });
+
+    // html
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.dataset.i18nHtml;
+      if (t[key] != null) el.innerHTML = t[key];
+    });
+
+    // list
+    document.querySelectorAll('[data-i18n-list]').forEach(el => {
+      const key = el.dataset.i18nList;
+      const items = t[key];
+      if (Array.isArray(items)) {
+        el.innerHTML = items.map(i => `<li>${i}</li>`).join('');
+      }
+    });
+
+    // page title
+    if (t.pageTitle) document.title = t.pageTitle;
+
+    // resume link
+    const resumeBtn = document.getElementById('resumeBtn');
+    if (resumeBtn && t.resumeLink) resumeBtn.href = t.resumeLink;
+
+    // active lang
+    langButtons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  }
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      if (!translations[lang]) return;
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      applyTranslations(lang);
+    });
+  });
+
+  applyTranslations(currentLang);
 });
-
-const animateInClass = 'animate-in';
-const style = document.createElement('style');
-style.textContent = `
-    .${animateInClass} {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-`;
-document.head.appendChild(style);
